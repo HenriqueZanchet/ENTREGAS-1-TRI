@@ -1,0 +1,99 @@
+* {
+    box-sizing: border-box;
+}
+
+html, body {
+    padding: 0;
+    margin: 0;
+    border: 0 none;
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: cadetblue;
+    
+}
+
+@keyframes piscadela {
+    50% {
+        background-color: white;
+    }
+}
+
+main {
+    border: 50px;
+    height: 90vh;
+    width: 90vh;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.start {
+    border: 0 none;
+    display: flex;
+    position: absolute;
+    z-index: +1;
+    padding: 5vmin;
+    height: 100%;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+    color: cadetblue;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    background-color: #00000099;
+    font-size: 250px;
+}
+
+.hide {
+    opacity: 0;
+    visibility: hidden;
+}
+
+main > div {
+    border: 10px solid black;
+    width: 50%;
+    flex: none;
+}
+
+main > div:nth-child(1) {
+    background-color: blue;
+    border-radius: 100% 0 0 0;
+}
+
+main > div:nth-child(2) {
+    background-color: red;
+    border-radius: 0 100% 0 0;
+}
+
+main > div:nth-child(3) {
+    background-color: green;
+    border-radius: 0 0 0 100%;
+}
+
+main > div:nth-child(4) {
+    background-color: yellow;
+    border-radius: 0 0 100% 0;
+}
+
+main > div.animate {
+    /* background-color: white; */ /* usado no exemplo transition */
+    animation: piscadela .3s ease-in-out;
+    /* animation-name: piscadela;
+    animation-duration: 1s;
+    animation-timing-function: ease-in-out; */
+}
+
+div.pontuacao {
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-size: 60px;
+    position: absolute;
+    background-color: whitesmoke;
+    border: solid 12px black;
+    border-radius: 100%;
+    height: 250px;
+    width: 250px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
